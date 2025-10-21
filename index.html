@@ -40,7 +40,7 @@
     </div>
 
     <script>
-        // The structure is based on the logic from the provided CSV file.
+        // The structure is based on the logic from the provided data.
         let decisionTreeData = {
           'start': {
             question: 'Which geo is included in the RFP?',
@@ -76,7 +76,7 @@
               <p class="text-lg sm:text-xl font-semibold mb-2">Decision Reached!</p>
               <p>
                   <a href="https://docs.google.com/presentation/d/1fsjOtXxDzJpuvzna0ldTK_os9xEWOqI27PC5YZTsOso/edit?slide=id.g3365098668c_0_1834#slide=id.g3365098668c_0_1834" target="_blank" class="text-[#F47B20] hover:underline">TruAudience by Transunion</a>
-                  Feel free to <a href="https://triplelift.atlassian.net/wiki/spaces/KNOW/pages/4259348481/TransUnion+Data+Marketplace#RFP-or-Pitch-Support" target="_blank" class="text-[#F47B20] hover:underline">submit a salesforce support ticket to get audience recommendations from the LCS Team</a>. We're here to help!
+                  Feel free to <a href="https://triplelift.atlassian.net/wiki/spaces/KNOW/pages/4259348481/TransUnion+Data+Marketplace#RFP-or-Pitch-Support" target="_blank" class="text-[#F47B20] hover:underline">submit a salesforce support ticket to get audience recommendations from the LCS Team</a>. We're here to help! or include any <a href="https://docs.google.com/presentation/d/1fsjOtXxDzJpuvzna0ldTK_os9xEWOqI27PC5YZTsOso/edit?slide=id.g36e6821631b_0_2252#slide=id.g36e6821631b_0_2252" target="_blank" class="text-[#F47B20] hover:underline">Life360 segments</a>
               </p>
             `
           },
@@ -121,19 +121,10 @@
           'intl_campaign_goal_question': {
             question: 'What is your campaign goal?',
             choices: [
-              { label: 'Awareness', nextStepId: 'intl_awareness_outcome' },
-              { label: 'Consideration', nextStepId: 'intl_consideration_outcome' },
-              { label: 'Conversion', nextStepId: 'intl_conversion_outcome' },
+              { label: 'Awareness', nextStepId: 'awareness_final_outcome' }, // Redirect to US path for content consistency
+              { label: 'Consideration', nextStepId: 'consideration_outcome' }, // Redirect to US path for content consistency
+              { label: 'Conversion', nextStepId: 'conversion_outcome' }, // Redirect to US path for content consistency
             ],
-          },
-          'intl_awareness_outcome': {
-            outcome: `Consider using <a href="https://docs.google.com/presentation/d/1fsjOtXxDzJpuvzna0ldTK_os9xEWOqI27PC5YZTsOso/edit?slide=id.g36e6821631b_0_1252#slide=id.g36e6821631b_0_1252" target="_blank" class="text-[#F47B20] hover:underline">Demographic segments</a> (Age, Gender), <a href="https://docs.google.com/presentation/d/1fsjOtXxDzJpuvzna0ldTK_os9xEWOqI27PC5YZTsOso/edit?slide=id.g36e6821631b_0_844#slide=id.g36e6821631b_0_844" target="_blank" class="text-[#F47B20] hover:underline">Broad Interests & Lifestyle</a> (Sports, Healthy Eating).`
-          },
-          'intl_consideration_outcome': {
-            outcome: `Consider using <a href="https://docs.google.com/presentation/d/1fsjOtXxDzJpuvzna0ldTK_os9xEWOqI27PC5YZTsOso/edit?slide=id.g36e6821631b_0_844#slide=id.g36e6821631b_0_844" target="_blank" class="text-[#F47B20] hover:underline">Specific interests</a> (Football), <a href="https://docs.google.com/presentation/d/1fsjOtXxDzJpuvzna0ldTK_os9xEWOqI27PC5YZTsOso/edit?slide=id.g36e6821631b_0_844#slide=id.g36e6821631b_0_844" target="_blank" class="text-[#F47B20] hover:underline">Affinity</a> (Green & Sustainability), <a href="https://docs.google.com/presentation/d/1fsjOtXxDzJpuvzna0ldTK_os9xEWOqI27PC5YZTsOso/edit?slide=id.g36e6821631b_0_844#slide=id.g36e6821631b_0_844" target="_blank" class="text-[#F47B20] hover:underline">Psychographic</a> (Luxury Home Architecture & Design), <a href="https://docs.google.com/presentation/d/1fsjOtXxDzJpuvzna0ldTK_os9xEWOqI27PC5YZTsOso/edit?slide=id.g36e6821631b_0_1357#slide=id.g36e6821631b_0_1357" target="_blank" class="text-[#F47B20] hover:underline">Seasonal Tentpoles & Key Events</a> (Black Friday).`
-          },
-          'intl_conversion_outcome': {
-            outcome: `Consider using <a href="https://docs.google.com/presentation/d/1fsjOtXxDzJpuvzna0ldTK_os9xEWOqI27PC5YZTsOso/edit?slide=id.g3365098668c_0_4866#slide=id.g3365098668c_0_4866" target="_blank" class="text-[#F47B20] hover:underline">Purchase intent segments</a> and <a href="https://triplelift.atlassian.net/wiki/spaces/TA1/pages/4275470502/Generative+AI+Custom+Keyword+Segments" target="_blank" class="text-[#F47B20] hover:underline">Custom segments</a> & <a href="https://docs.google.com/presentation/d/1fsjOtXxDzJpuvzna0ldTK_os9xEWOqI27PC5YZTsOso/edit?slide=id.g36e6821631b_0_1357#slide=id.g36e6821631b_0_1357" target="_blank" class="text-[#F47B20] hover:underline">Seasonal Tentpoles & Key Events</a> (Black Friday).`
           },
           'other_geo_outcome': {
             outcome: 'Unfortunately no audience targeting is available.'
